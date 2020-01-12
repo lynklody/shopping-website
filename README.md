@@ -1,1 +1,2 @@
-A Todo list app developed by ReactJS & Redux 
+A Todo list app developed with ReactJS & Redux 
+Made by Wendy with ♥
