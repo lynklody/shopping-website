@@ -30,6 +30,9 @@ class AddTodo extends Component {
 
     handleClick = () => {
         this.props.addTodo(this.state.text);
+        this.setState({
+            text: '',
+        })
     }
 }
 

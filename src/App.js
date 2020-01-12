@@ -39,9 +39,11 @@ class App extends Component {
         const {filter} = this.props;
         return (
             <div>
+                <div>MY TODO LIST</div>
                 <AddTodo addTodo={this.addTodo} />
                 <TodoList todos={todos} toggleTodo={this.toggleTodo} />
                 <Footer filter={filter} setVisibilityFilter={this.setVisibilityFilter} />
+                <div>Made by Wendy with ♥</div>
             </div>
         );
     }
