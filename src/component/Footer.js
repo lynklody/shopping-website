@@ -3,7 +3,8 @@ import filter from "../App";
 
 class Footer extends Component {
     render() {
-        const { filter, setVisibilityFilter } = this.props;
+        const { filter, setFilter: setVisibilityFilter } = this.props;
+        // renamed setVisibilityFilter to setFilter in order to keep the original func name below
         return (
             <div>
                 <span>Show:</span>
