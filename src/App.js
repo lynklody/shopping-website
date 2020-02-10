@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import AddTodo from "./component/AddTodo";
-import TodoList from "./component/TodoList";
-import Footer from "./component/Footer";
+// import AddTodo from "./component/AddTodo";
+// import TodoList from "./component/TodoList";
+// import Footer from "./component/Footer";
 import AddTodoContainer from './containers/AddTodoContainer'
 import TodoListContainer from './containers/TodoListContainer'
 import FooterContainer from './containers/FooterContainer'
@@ -43,9 +43,9 @@ class App extends Component {
         return (
             <div>
                 <div>MY TODO LIST</div>
-                <AddTodoContainer/>
-                <TodoListContainer/>
-                <Footer/>
+                <AddTodoContainer />
+                <TodoListContainer />
+                <FooterContainer />
                 {/* <AddTodo addTodo={this.addTodo} />
                 <TodoList todos={todos} toggleTodo={this.toggleTodo} />
                 <Footer filter={filter} setVisibilityFilter={this.setVisibilityFilter} /> */}
