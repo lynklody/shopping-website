@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import filter from "../App";
+// import filter from "../App";
 
 class Footer extends Component {
     render() {

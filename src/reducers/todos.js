@@ -30,7 +30,7 @@ const reducer = (state = initialState, action) => {
         default:
             return {
                 ...state,
-                data: todos()  // invoke child reducer todos here
+                data: todos(state.data, action)  // invoke child reducer todos here
             }
     }
 }

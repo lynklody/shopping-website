@@ -5,24 +5,24 @@ let nextTodoId = 0
 
 // sync actions
 const fectchTodosRequest = () => ({
-    type: 'FETCH_TODOS_REQUEST'
+    type: FETCH_TODOS_REQUEST
 })
 
 const fectchTodosSuccess = (data) => ({
-    type: 'FETCH_TODOS_SUCCESS',
-    data
+    type: FETCH_TODOS_SUCCESS,
+    data // todo list data
 })
 
 const fectchTodosFailure = (error) => ({
-    type: 'FETCH_TODOS_FAILURE',
+    type: FETCH_TODOS_FAILURE,
     error
 })
 
-// async actions
+// invoke an async action
 export const fetchTodos = () => {
-    return (dispatch) => {
+    return (dispatch) => { // return a function, need a middleware(redux-thunk)
         dispatch(fectchTodosRequest());
-        return fetch("./mock/todos.json").then(
+        return fetch('./mock/todos.json').then(
             response => {
                 response.json().then(data => {
                     dispatch(fectchTodosSuccess(data));
