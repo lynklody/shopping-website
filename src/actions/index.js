@@ -30,28 +30,44 @@ export const fetchTodos = () => {
             },
             error => {
                 dispatch(fectchTodosFailure(error));
-                console.log("An error occurred: "+ error);
+                console.log("Tell Wendy an error occurred: \n"+ error);
             }
         )
     }
 }
 
+/**
+ * addTodo
+ * @param {*} text 
+ */
 export const addTodo = (text) => ({
     type: ADD_TODO,
     id: nextTodoId++,
     text
 })
 
+/**
+ * toggleTodo
+ * @param {*} id 
+ */
 export const toggleTodo = id => ({
     type: TOGGLE_TODO,
     id
 })
 
+/**
+ * setFilter
+ * @param {*} filter 
+ */
 export const setFilter = filter => ({
     type: SET_FILTER,
     filter
 })
 
+/**
+ * setTodoText
+ * @param {*} text 
+ */
 export const setTodoText = text => ({
     type: SET_TODO_TEXT,
     text

@@ -1,4 +1,4 @@
-import { SET_FILTER } from '../actions/actionTypes'
+import { SET_FILTER } from '../actions/actionTypes';
 
 const filter = (state = 'all', action) => {
     switch (action.type) {
@@ -9,7 +9,7 @@ const filter = (state = 'all', action) => {
             //     filter: action.filter
             // }
         default:
-            return state;
+            return state
     }
 }
 export default filter

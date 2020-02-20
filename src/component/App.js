@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 // import AddTodo from "./component/AddTodo";
 // import TodoList from "./component/TodoList";
 // import Footer from "./component/Footer";
-import AddTodoContainer from './containers/AddTodoContainer'
-import TodoListContainer from './containers/TodoListContainer'
-import FooterContainer from './containers/FooterContainer'
+import AddTodoContainer from '../containers/AddTodoContainer'
+import TodoListContainer from '../containers/TodoListContainer'
+import FooterContainer from '../containers/FooterContainer'
 
 // const todos = [
 //     {
