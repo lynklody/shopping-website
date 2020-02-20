@@ -38,8 +38,10 @@ const reducer = (state = initialState, action) => {
 const todos = (state = [], action) => {
     switch (action.type) {
         case ADD_TODO:
-            return [...state,
+            return [
+                ...state,
                 {
+                    id: action.id,
                     text: action.text,
                     completed: false
                 }
@@ -56,9 +58,8 @@ const todos = (state = [], action) => {
             //     ]
             // }
         case TOGGLE_TODO:
-            return state.map(
-                todo =>
-                    todo.id === action.id 
+            return state.map( todo =>
+                (todo.id === action.id) 
                     ? {...todo, completed: !todo.completed}
                     : todo
                 )
@@ -71,7 +72,7 @@ const todos = (state = [], action) => {
             //     })
             // }
         default:
-            return state;
+            return state
         }
 }
 

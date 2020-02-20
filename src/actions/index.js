@@ -22,7 +22,7 @@ const fectchTodosFailure = (error) => ({
 export const fetchTodos = () => {
     return (dispatch) => { // return a function, need a middleware(redux-thunk)
         dispatch(fectchTodosRequest());
-        return fetch('./mock/todos.json').then(
+        return fetch('./mock/todos.json').then( // This is how to access file in public
             response => {
                 response.json().then(data => {
                     dispatch(fectchTodosSuccess(data));

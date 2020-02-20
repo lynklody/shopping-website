@@ -53,7 +53,7 @@ class AddTodo extends Component {
     }
 
     handleClick = () => {
-        this.props.AddTodo(this.props.text)
+        this.props.addTodo(this.props.text)
     }
 
 
