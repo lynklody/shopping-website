@@ -1,9 +1,10 @@
-// AddTodoContainer
+// used in AddTodoContainer
 export const getText = (state) => state.text
 
-// TodoListContainer / Footer Container
+// used in TodoListContainer / Footer Container
 export const getFilter = (state) => state.filter
 
+// used in TodoListContainer
 export const getVisibleTodos = (state) => {
     const { todos: {data}, filter } = state
     switch (filter) {

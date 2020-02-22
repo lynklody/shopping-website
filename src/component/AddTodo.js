@@ -54,8 +54,6 @@ class AddTodo extends Component {
         this.props.addTodo(this.props.text)
         this.props.setTodoText("") // clear the content after input
     }
-
-
 }
 
 export default AddTodo;
