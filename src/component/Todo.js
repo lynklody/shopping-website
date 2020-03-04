@@ -4,7 +4,7 @@ class Todo extends Component {
     render() {
         const {completed, text, onClick } = this.props;
         return (
-            <li 
+            <li
                 onClick={onClick}
                 style={{ 
                     textDecoration: completed ? "line-through" : "none"

@@ -5,6 +5,10 @@ import React, { Component } from 'react';
 import AddTodoContainer from '../containers/AddTodoContainer'
 import TodoListContainer from '../containers/TodoListContainer'
 import FooterContainer from '../containers/FooterContainer'
+import { makeStyles } from '@material-ui/core/styles'
+import { Container, Box, Card, CardContent } from '@material-ui/core'
+import Favorite from '@material-ui/icons/Favorite';
+import red from '@material-ui/core/colors/red'
 
 // const todos = [
 //     {
@@ -26,7 +30,27 @@ import FooterContainer from '../containers/FooterContainer'
 
 // const filter = "all";
 
-class App extends Component {
+const redheart = red;
+
+const useStyles = makeStyles( () => ({
+    card: {
+        marginTop: 40,
+        // borderRadius: spacing(0.5),
+        transition: '0.3s',
+        width: '90%',
+        overflow: 'initial',
+        background: '#ffffff',
+      },
+    content: {
+        textAlign: 'center',
+        overflowX: 'auto',
+      },
+}));
+
+
+
+const App = () => {
+// class App extends Component {
 
     // constructor(props) {
     //     super(props);
@@ -37,22 +61,60 @@ class App extends Component {
     //     this.nextTodoId = 0;
     // }
 
-    render() {
+    // render() {
         // const todos = this.getVisibleTodos();
         // const {filter} = this.props;
+        const classes = useStyles();
+        // const cardHeaderStyles = 
         return (
-            <div>
-                <div>MY TODO LIST</div>
-                <AddTodoContainer />
-                <TodoListContainer />
-                <FooterContainer />
-                {/* <AddTodo addTodo={this.addTodo} />
-                <TodoList todos={todos} toggleTodo={this.toggleTodo} />
-                <Footer filter={filter} setVisibilityFilter={this.setVisibilityFilter} /> */}
-                <div>Made by Wendy with ♥</div>
-            </div>
+            <Container> {/**material-ui container */}
+            <Box display="flex"
+                 alignItems="center"
+                 justifyContent="center"
+                 >
+                <Card className={classes.card}>
+                    <CardContent>
+                        MY TODO LIST
+                    </CardContent>
+                    <Box display="flex" 
+                    alignItems="center" 
+                    justifyContent="center"
+                    >
+                        <AddTodoContainer />
+                    </Box>
+                    <Box display="flex" 
+                    alignItems="center" 
+                    justifyContent="center" 
+                    >
+                        <CardContent>
+                            <TodoListContainer />
+                        </CardContent>
+                    </Box>
+                    <Box display="flex" 
+                    alignItems="center" 
+                    justifyContent="center" 
+                    >
+                        <FooterContainer />
+                    </Box>
+                    {/* <AddTodo addTodo={this.addTodo} />
+                    <TodoList todos={todos} toggleTodo={this.toggleTodo} />
+                    <Footer filter={filter} setVisibilityFilter={this.setVisibilityFilter} /> */}
+                    <Box  display="flex" 
+                    alignItems="center" 
+                    justifyContent="right" 
+                    >
+                        <CardContent>
+                            Made by Wendy with 
+                            <Favorite
+                                style={{ color: red.A400 }}
+                            ></Favorite>
+                        </CardContent>
+                    </Box>
+                </Card>
+            </Box>
+            </Container>
         );
-    }
+    // }
 
     // // filter todos according to conditions given
     // getVisibleTodos = () => {

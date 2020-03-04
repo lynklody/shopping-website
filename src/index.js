@@ -5,8 +5,11 @@ import { Provider } from 'react-redux'
 import rootReducer from './reducers'
 import thunkMiddleware from 'redux-thunk'
 import App from './component/App'
-import loggerMiddleware from "./middlewares/logger"
+import loggerMiddleware from './middlewares/logger'
 import loggerEnhancer from "./enhancers/logger"
+// import { ThemeProvider } from '@material-ui/styles'
+import CssBaseline from '@material-ui/core/CssBaseline'
+// import theme from './theme.js'
 // import * as serviceWorker from './serviceWorker';
 // import store from './store'
 // import './index.css';
@@ -20,7 +23,10 @@ const store = createStore(rootReducer,
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        {/* <ThemeProvider theme={theme}> */}
+            <CssBaseline />
+            <App />
+        {/* </ThemeProvider> */}
     </Provider>,
     document.getElementById("root")
 );
