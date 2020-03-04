@@ -1,5 +1,5 @@
 A Todo list app developed with ReactJS & Redux & material-UI
-Made by Wendy with ♥
+Made by Wendy with :heart:
 
 <h1>Dependencies</h1>
 (below are commands for installing with <b>npm</b> only)
