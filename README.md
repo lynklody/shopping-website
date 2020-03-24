@@ -13,7 +13,7 @@ Made by Wendy with :heart:
 <h5>material-UI core</h5>
 
     npm install @material-ui/core
-    
+
 <h5>Theming</h5>
 
     npm install @material-ui/styles

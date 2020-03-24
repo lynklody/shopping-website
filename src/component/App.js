@@ -6,9 +6,10 @@ import AddTodoContainer from '../containers/AddTodoContainer'
 import TodoListContainer from '../containers/TodoListContainer'
 import FooterContainer from '../containers/FooterContainer'
 import { makeStyles } from '@material-ui/core/styles'
-import { Container, Box, Card, CardContent } from '@material-ui/core'
+import { Container, Box, Card, CardContent, Typography } from '@material-ui/core'
 import Favorite from '@material-ui/icons/Favorite';
 import red from '@material-ui/core/colors/red'
+import { blue, } from '@material-ui/core/colors';
 
 // const todos = [
 //     {
@@ -30,8 +31,6 @@ import red from '@material-ui/core/colors/red'
 
 // const filter = "all";
 
-const redheart = red;
-
 const useStyles = makeStyles( () => ({
     card: {
         marginTop: 40,
@@ -40,11 +39,21 @@ const useStyles = makeStyles( () => ({
         width: '90%',
         overflow: 'initial',
         background: '#ffffff',
-      },
+    },
+    title: {
+        fontSize: 25,
+        fontWeight: 800,
+        textAlign: 'center',
+        color: blue.A200,
+        // fontFamily: "'Arial', sans-serif",
+    },
     content: {
         textAlign: 'center',
         overflowX: 'auto',
-      },
+    },
+    button: {
+        textAligh: 'center',
+    }
 }));
 
 
@@ -73,7 +82,7 @@ const App = () => {
                  justifyContent="center"
                  >
                 <Card className={classes.card}>
-                    <CardContent>
+                    <CardContent className={classes.title}>
                         MY TODO LIST
                     </CardContent>
                     <Box display="flex" 
@@ -86,9 +95,11 @@ const App = () => {
                     alignItems="center" 
                     justifyContent="center" 
                     >
-                        <CardContent>
-                            <TodoListContainer />
-                        </CardContent>
+                        <Typography>
+                            <CardContent>
+                                <TodoListContainer />
+                            </CardContent>
+                        </Typography>
                     </Box>
                     <Box display="flex" 
                     alignItems="center" 
