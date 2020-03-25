@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import { Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles'
-
-const useStyles = makeStyles ( () => ({
-    Typography: {
-        fontSize: 16,
-    },
-}));
+import { Container, Box, Card, CardContent } from '@material-ui/core'
+import TextField from '@material-ui/core/TextField';
 
 class AddTodo extends Component {
 // const AddTodo = () => {
@@ -46,14 +40,26 @@ class AddTodo extends Component {
     // const classes = useStyles();
     render() {
         return (
-            <Typography>
-            <div>
-                <input value={this.props.text} onChange={this.handleChange} />
+            <Container>
+            <Box display="flex" 
+            alignItems="center" 
+            justifyContent="center">
+                <TextField
+                    id="outlined-textarea"
+                    label="Enter your next To-do item here"
+                    placeholder='Try pressing "Enter"'
+                    multiline
+                    variant="outlined"
+                    fullWidth
+                    value={this.props.text}
+                    onChange={this.handleChange}
+                />
+                {/* <input value={this.props.text} onChange={this.handleChange} /> */}
                 <button 
                     onClick={this.handleClick}
                     >Add</button>
-            </div>
-            </Typography>
+            </Box>
+            </Container>
         );
     }
 

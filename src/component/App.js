@@ -7,6 +7,7 @@ import TodoListContainer from '../containers/TodoListContainer'
 import FooterContainer from '../containers/FooterContainer'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container, Box, Card, CardContent, Typography } from '@material-ui/core'
+import { typography } from '@material-ui/system';
 import Favorite from '@material-ui/icons/Favorite';
 import red from '@material-ui/core/colors/red'
 import { blue, } from '@material-ui/core/colors';

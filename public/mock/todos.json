@@ -1,12 +1,12 @@
 [
     {
         "id": 100,
-        "text": "the first todo item",
-        "completed": true
+        "text": "Add your first to-do item",
+        "completed": false
     },
     {
         "id": 101,
-        "text": "the second todo item",
-        "completed": false
+        "text": "Cross them out by clicking on an item when you are done",
+        "completed": true
     }
 ]
