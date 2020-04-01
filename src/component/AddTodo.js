@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Box, Card, CardContent } from '@material-ui/core'
+import { Container, Box, Button } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField';
+import AddBoxIcon from '@material-ui/icons/AddBox';
+import { blue } from '@material-ui/core/colors';
 
 class AddTodo extends Component {
 // const AddTodo = () => {
@@ -46,8 +48,8 @@ class AddTodo extends Component {
             justifyContent="center">
                 <TextField
                     id="outlined-textarea"
-                    label="Enter your next To-do item here"
-                    placeholder='Try pressing "Enter"'
+                    label="ENTER NEXT ITEM HERE"
+                    placeholder='Press "Enter" to enable multi-line input'
                     multiline
                     variant="outlined"
                     fullWidth
@@ -55,9 +57,17 @@ class AddTodo extends Component {
                     onChange={this.handleChange}
                 />
                 {/* <input value={this.props.text} onChange={this.handleChange} /> */}
-                <button 
+                {/* <button 
                     onClick={this.handleClick}
-                    >Add</button>
+                    >Add</button> */}
+                <Button 
+                    onClick={this.handleClick}
+                    startIcon={<AddBoxIcon />}
+                    // color={blue.A200}
+                    // fontSize="30px"
+                    >
+                        Add
+                </Button>
             </Box>
             </Container>
         );
