@@ -7,9 +7,9 @@ import thunkMiddleware from 'redux-thunk'
 import App from './component/App'
 import loggerMiddleware from './middlewares/logger'
 import loggerEnhancer from "./enhancers/logger"
-// import { ThemeProvider } from '@material-ui/styles'
+import { MuiThemeProvider } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
-// import theme from './theme.js'
+import theme from './theme'
 // import * as serviceWorker from './serviceWorker';
 // import store from './store'
 // import './index.css';
@@ -23,10 +23,10 @@ const store = createStore(rootReducer,
 
 ReactDOM.render(
     <Provider store={store}>
-        {/* <ThemeProvider theme={theme}> */}
+        <MuiThemeProvider theme={theme}>
             <CssBaseline />
             <App />
-        {/* </ThemeProvider> */}
+        </MuiThemeProvider>
     </Provider>,
     document.getElementById("root")
 );
