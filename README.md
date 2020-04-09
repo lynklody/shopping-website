@@ -1,8 +1,7 @@
 A Todo list app developed with ReactJS & Redux & material-UI
 <br/>
 URL:globe_with_meridians: : https://lynklody.github.io/todo-list/ 
-<br/>
-Made by Wendy with :heart:
+
 
 <h1>Dependencies</h1>
 (below are commands for installing with <b>npm</b> only)
@@ -24,3 +23,6 @@ Made by Wendy with :heart:
 <h5>SVG Icons</h5>
 
     npm install @material-ui/icons
+
+<br/>
+Made by Wendy with :heart:
