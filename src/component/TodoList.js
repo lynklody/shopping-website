@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todo from "./Todo";
+import { CardContent } from '@material-ui/core'
 
 class TodoList extends Component {
 
@@ -10,6 +11,7 @@ class TodoList extends Component {
     render() {
         const {todos, toggleTodo} = this.props;
         return (
+            <CardContent>
             <ul>
                 {
                     todos.map(todo => {
@@ -19,6 +21,7 @@ class TodoList extends Component {
                     })
                 }
             </ul>
+            </CardContent>
         );
     }
 }

@@ -16,6 +16,7 @@ class Footer extends Component {
                         onClick={
                             () => setVisibilityFilter("all")
                         }
+                        color="primary"
                     >
                         All
                     </Button>
@@ -23,6 +24,7 @@ class Footer extends Component {
                         onClick={
                             () => setVisibilityFilter("active")
                         }
+                        color="primary"
                     >
                         Active
                     </Button>
@@ -30,6 +32,7 @@ class Footer extends Component {
                         onClick={
                             () => setVisibilityFilter("completed")
                         }
+                        color="primary"
                     >
                         Completed
                     </Button>

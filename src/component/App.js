@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 // import AddTodo from "./component/AddTodo";
 // import TodoList from "./component/TodoList";
 // import Footer from "./component/Footer";
@@ -6,11 +6,12 @@ import AddTodoContainer from '../containers/AddTodoContainer'
 import TodoListContainer from '../containers/TodoListContainer'
 import FooterContainer from '../containers/FooterContainer'
 import { makeStyles } from '@material-ui/core/styles'
-import { Container, Box, Card, CardContent, Typography } from '@material-ui/core'
-import { typography } from '@material-ui/system';
-import Favorite from '@material-ui/icons/Favorite';
+import { Container, MuiThemeProvider, Box, Card, CardContent, Typography } from '@material-ui/core'
+import { ThemeProvider } from '@material-ui/styles'
+import Favorite from '@material-ui/icons/Favorite'
 import red from '@material-ui/core/colors/red'
-import { blue, } from '@material-ui/core/colors';
+import { blue } from '@material-ui/core/colors'
+import theme from '../theme'
 
 // const todos = [
 //     {
@@ -74,23 +75,31 @@ const App = () => {
     // render() {
         // const todos = this.getVisibleTodos();
         // const {filter} = this.props;
-        const classes = useStyles();
+        // const classes = useStyles();
         // const cardHeaderStyles = 
         return (
+            // <ThemeProvider theme={theme}>
             <Container> {/**material-ui container */}
+
             <Box display="flex"
                  alignItems="center"
                  justifyContent="center"
                  >
-                <Card className={classes.card}>
-                    <CardContent className={classes.title}>
-                        MY TODO LIST
+                <Card>
+                {/* <Card className={classes.card}> */}
+                    {/* <CardContent className={classes.title}> */}
+                    <CardContent>
+                        <Typography color="primary">
+                            MY TODO LIST
+                        </Typography>
                     </CardContent>
                     <Box display="flex" 
                     alignItems="center" 
                     justifyContent="center"
                     >
+
                         <AddTodoContainer />
+
                     </Box>
                     <Box display="flex" 
                     alignItems="center" 
@@ -98,7 +107,9 @@ const App = () => {
                     >
                         <Typography>
                             <CardContent>
+
                                 <TodoListContainer />
+
                             </CardContent>
                         </Typography>
                     </Box>
@@ -106,7 +117,9 @@ const App = () => {
                     alignItems="center" 
                     justifyContent="center" 
                     >
+
                         <FooterContainer />
+
                     </Box>
                     {/* <AddTodo addTodo={this.addTodo} />
                     <TodoList todos={todos} toggleTodo={this.toggleTodo} />
@@ -124,7 +137,9 @@ const App = () => {
                     </Box>
                 </Card>
             </Box>
+            
             </Container>
+            // </ThemeProvider>
         );
     // }
 

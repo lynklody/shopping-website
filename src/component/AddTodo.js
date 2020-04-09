@@ -63,8 +63,7 @@ class AddTodo extends Component {
                 <Button 
                     onClick={this.handleClick}
                     startIcon={<AddBoxIcon />}
-                    // color={blue.A200}
-                    // fontSize="30px"
+                    color="primary"
                     >
                         Add
                 </Button>
