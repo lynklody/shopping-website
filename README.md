@@ -1,4 +1,7 @@
 A Todo list app developed with ReactJS & Redux & material-UI
+<br/>
+URL:globe_with_meridians: : https://lynklody.github.io/todo-list/ 
+<br/>
 Made by Wendy with :heart:
 
 <h1>Dependencies</h1>
