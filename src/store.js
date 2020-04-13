@@ -12,9 +12,9 @@ const unsubscribe = store.subscribe(() => {
     console.log(store.getState())
 })
 
-store.dispatch(addTodo('from store lalala'))
-store.dispatch(toggleTodo(0))
-store.dispatch(setFilter('active'))
-store.dispatch(setTodoText('Wendy meow'))
+// store.dispatch(addTodo('from store lalala'))
+// store.dispatch(toggleTodo(0))
+// store.dispatch(setFilter('active'))
+// store.dispatch(setTodoText('Wendy meow'))
 
 unsubscribe()

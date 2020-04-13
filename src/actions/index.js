@@ -4,16 +4,16 @@ import { ADD_TODO, TOGGLE_TODO, SET_FILTER, SET_TODO_TEXT,
 let nextTodoId = 0
 
 // sync actions
-const fectchTodosRequest = () => ({
+const fetchTodosRequest = () => ({
     type: FETCH_TODOS_REQUEST
 })
 
-const fectchTodosSuccess = (data) => ({
+const fetchTodosSuccess = (data) => ({
     type: FETCH_TODOS_SUCCESS,
     data // todo list data
 })
 
-const fectchTodosFailure = (error) => ({
+const fetchTodosFailure = (error) => ({
     type: FETCH_TODOS_FAILURE,
     error
 })
@@ -21,15 +21,15 @@ const fectchTodosFailure = (error) => ({
 // invoke an async action
 export const fetchTodos = () => {
     return (dispatch) => { // return a function, need a middleware(redux-thunk)
-        dispatch(fectchTodosRequest());
-        return fetch('./mock/todos.json').then( // This is how to access file in public
+        dispatch(fetchTodosRequest());
+        return fetch('.\\mock\\initial_todos.json').then( // This is how to access file in public
             response => {
                 response.json().then(data => {
-                    dispatch(fectchTodosSuccess(data));
+                    dispatch(fetchTodosSuccess(data));
                 })
             },
             error => {
-                dispatch(fectchTodosFailure(error));
+                dispatch(fetchTodosFailure(error));
                 console.log("Tell Wendy an error occurred: \n"+ error);
             }
         )
