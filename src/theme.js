@@ -4,21 +4,21 @@ import { blue, red, indigo, pink, orange, green } from '@material-ui/core/colors
 const theme = createMuiTheme({
     typography: {
         fontFamily: "Arial",
-        fontSize: 14,
+        fontSize: 12,
         fontWeight: 800,
-        card: {
-            fontSize: '2rem',
-            fontWeight: 800,
-            marginTop: 50,
-        },
+        // card: {
+        //     fontSize: '2rem',
+        //     fontWeight: 800,
+        //     marginTop: 50,
+        // },
         button: {
-            fontSize: '1rem',
+            fontSize: 14,
             fontWeight: 600,
         },
-        textfield: {
-            fontSize: 10,
-            fontWeight: 500,
-        }
+        // textfield: {
+        //     fontSize: 10,
+        //     fontWeight: 500,
+        // }
     },
     palette: {
         primary: {

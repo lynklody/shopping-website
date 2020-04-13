@@ -43,14 +43,21 @@ class AddTodo extends Component {
         return (
             <Container>
             <Box 
-                display="flex"
+                // display="flex"
                 marginTop={5}
-                alignItems="center"
+                // marginLeft={5}
+                // marginRight={5}
                 justifyContent="center"
             >
             <Typography component={'span'} color="primary">
-                <Grid container spacing={3}>
-                    <Grid item xs={9}>
+                <Grid 
+                    container 
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                    spacing={3}
+                    >
+                    <Grid item xs={8}>
                         {/* <FormRow /> */}
                     <TextField
                         id="outlined-textarea"
@@ -59,7 +66,11 @@ class AddTodo extends Component {
                         multiline
                         size="medium"
                         variant="outlined"
+                        autoFocus
                         fullWidth
+                        // width="80%"
+                        rows={2}
+                        margin="normal"
                         value={this.props.text}
                         onChange={this.handleChange}
                     />
@@ -68,12 +79,11 @@ class AddTodo extends Component {
                     {/* <button 
                         onClick={this.handleClick}
                         >Add</button> */}
-                    <Grid item xs={1}>
+                    <Grid item xs={2}>
                     <Button 
-
+                        variant="outlined"
                         onClick={this.handleClick}
                         startIcon={<AddBoxIcon />}
-                        endIcon={<AddBoxIcon />}
                         color="primary"
                         >
                             Add

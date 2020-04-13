@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Box, Button } from '@material-ui/core'
+import { Container, Box, Button, Grid } from '@material-ui/core'
 // import filter from "../App";
 
 class Footer extends Component {
@@ -8,35 +8,52 @@ class Footer extends Component {
         // So here's a smart trick:
         // renamed setVisibilityFilter to setFilter in order to keep the original func name below
         return (
-            <Container>
-                <Box display="flex" 
-                    marginBottom={10}
-                    alignItems="center" 
-                    justifyContent="center">
-                    <Button disabled={filter === "all"}
-                        onClick={
-                            () => setVisibilityFilter("all")
-                        }
-                        color="primary"
+        <Container>
+            <Box 
+                // display="flex" 
+                marginBottom={10}
+                alignItems="center" 
+                justifyContent="center"
+                >
+                <Grid 
+                    container 
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
                     >
-                        All
-                    </Button>
-                    <Button disabled={filter === "active"}
-                        onClick={
-                            () => setVisibilityFilter("active")
-                        }
-                        color="primary"
-                    >
-                        Active
-                    </Button>
-                    <Button disabled={filter === "completed"}
-                        onClick={
-                            () => setVisibilityFilter("completed")
-                        }
-                        color="primary"
-                    >
-                        Completed
-                    </Button>
+                    <Grid item>
+                        <Button disabled={filter === "all"}
+                            onClick={
+                                () => setVisibilityFilter("all")
+                            }
+                            color="primary"
+                            variant="outlined"
+                        >
+                            All
+                        </Button>
+                    </Grid>
+                    <Grid item>
+                        <Button disabled={filter === "active"}
+                            onClick={
+                                () => setVisibilityFilter("active")
+                            }
+                            color="primary"
+                            variant="outlined"
+                        >
+                            Active
+                        </Button>
+                    </Grid>
+                    <Grid item>
+                        <Button disabled={filter === "completed"}
+                            onClick={
+                                () => setVisibilityFilter("completed")
+                            }
+                            color="primary"
+                            variant="outlined"
+                        >
+                            Completed
+                        </Button>
+                    </Grid>
 
                     {/* <button disabled={filter === "all"}
                         onClick={
@@ -53,8 +70,9 @@ class Footer extends Component {
                             () => setVisibilityFilter("completed")
                         }
                     >Completed</button> */}
-                </Box>
-            </Container>
+                </Grid>
+            </Box> 
+        </Container>
         );
     }
 }
