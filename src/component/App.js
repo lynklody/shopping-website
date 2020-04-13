@@ -6,8 +6,7 @@ import AddTodoContainer from '../containers/AddTodoContainer'
 import TodoListContainer from '../containers/TodoListContainer'
 import FooterContainer from '../containers/FooterContainer'
 import { makeStyles } from '@material-ui/core/styles'
-import { Container, MuiThemeProvider, Box, Card, CardContent, Typography } from '@material-ui/core'
-import { ThemeProvider } from '@material-ui/styles'
+import { Container, Box, Card, CardContent, Typography } from '@material-ui/core'
 import Favorite from '@material-ui/icons/Favorite'
 import red from '@material-ui/core/colors/red'
 import { blue } from '@material-ui/core/colors'
@@ -78,7 +77,6 @@ const App = () => {
         // const classes = useStyles();
         // const cardHeaderStyles = 
         return (
-            // <ThemeProvider theme={theme}>
             <Container> {/**material-ui container */}
 
             <Box display="flex"
@@ -89,7 +87,7 @@ const App = () => {
                 {/* <Card className={classes.card}> */}
                     {/* <CardContent className={classes.title}> */}
                     <CardContent>
-                        <Typography color="primary">
+                        <Typography component={'span'} color="primary">
                             MY TODO LIST
                         </Typography>
                     </CardContent>
@@ -105,7 +103,7 @@ const App = () => {
                     alignItems="center" 
                     justifyContent="center" 
                     >
-                        <Typography>
+                        <Typography component={'span'}>
                             <CardContent>
 
                                 <TodoListContainer />
@@ -139,7 +137,6 @@ const App = () => {
             </Box>
             
             </Container>
-            // </ThemeProvider>
         );
     // }
 
