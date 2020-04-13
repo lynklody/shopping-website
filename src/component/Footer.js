@@ -10,6 +10,7 @@ class Footer extends Component {
         return (
             <Container>
                 <Box display="flex" 
+                    marginBottom={10}
                     alignItems="center" 
                     justifyContent="center">
                     <Button disabled={filter === "all"}

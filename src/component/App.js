@@ -83,7 +83,9 @@ const App = () => {
         const cardShadowStyles = useSoftRiseShadowStyles({ inactive: true });
         return (
             <Container> {/**material-ui container */}
-            <Box display="flex"
+            <Box 
+                 display="flex"
+                 marginTop={5}
                  alignItems="center"
                  justifyContent="center"
                  >
