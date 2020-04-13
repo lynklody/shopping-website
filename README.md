@@ -23,6 +23,10 @@ URL:globe_with_meridians: : https://lynklody.github.io/todo-list/
 <h5>SVG Icons</h5>
 
     npm install @material-ui/icons
+    
+<h5>Mui-Treasury styles</h5>
+
+    npm i @mui-treasury/styles
 
 <br/>
 Made by Wendy with :heart:

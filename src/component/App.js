@@ -10,7 +10,10 @@ import { Container, Box, Card, CardContent, Typography } from '@material-ui/core
 import Favorite from '@material-ui/icons/Favorite'
 import red from '@material-ui/core/colors/red'
 import { blue } from '@material-ui/core/colors'
-import theme from '../theme'
+import CardHeader from '@material-ui/core/CardHeader'
+import { useContainedCardHeaderStyles } from '@mui-treasury/styles/cardHeader/contained'
+import { useFadedShadowStyles } from '@mui-treasury/styles/shadow/faded'
+import { useSoftRiseShadowStyles } from '@mui-treasury/styles/shadow/softRise'
 
 // const todos = [
 //     {
@@ -32,14 +35,14 @@ import theme from '../theme'
 
 // const filter = "all";
 
-const useStyles = makeStyles( () => ({
+const useStyles = makeStyles( ({spacing}) => ({
     card: {
-        marginTop: 40,
-        // borderRadius: spacing(0.5),
+        marginTop: 50,
+        marginBottom: 30,
+        borderRadius: spacing(0.5),
         transition: '0.3s',
         width: '90%',
         overflow: 'initial',
-        background: '#ffffff',
     },
     title: {
         fontSize: 25,
@@ -74,23 +77,33 @@ const App = () => {
     // render() {
         // const todos = this.getVisibleTodos();
         // const {filter} = this.props;
-        // const classes = useStyles();
-        // const cardHeaderStyles = 
+        const classes = useStyles();
+        const cardHeaderShadowStyles = useFadedShadowStyles();
+        const cardHeaderStyles = useContainedCardHeaderStyles();
+        const cardShadowStyles = useSoftRiseShadowStyles({ inactive: true });
         return (
             <Container> {/**material-ui container */}
-
             <Box display="flex"
                  alignItems="center"
                  justifyContent="center"
                  >
-                <Card>
+                <Card className={classes.card}>
+                <Typography component={'span'}>
                 {/* <Card className={classes.card}> */}
                     {/* <CardContent className={classes.title}> */}
-                    <CardContent>
+                    {/* <CardContent>
                         <Typography component={'span'} color="primary">
                             MY TODO LIST
                         </Typography>
-                    </CardContent>
+                    </CardContent> */}
+                    <Typography component={'span'} color="primary">
+                        <CardHeader
+                            className={cardHeaderShadowStyles.root}
+                            classes={cardHeaderStyles}
+                            title={'Change me'}
+                            subheader={'My To-Do List App'}
+                        />
+                    </Typography>
                     <Box display="flex" 
                     alignItems="center" 
                     justifyContent="center"
@@ -133,6 +146,7 @@ const App = () => {
                             ></Favorite>
                         </CardContent>
                     </Box>
+                </Typography>
                 </Card>
             </Box>
             
