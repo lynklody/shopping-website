@@ -1,6 +1,8 @@
-A Todo list app developed with ReactJS & Redux & material-UI
+<h1>A Todo list app developed with ReactJS & Redux & material-UI</h1>
 <br/>
 URL:globe_with_meridians: : https://lynklody.github.io/todo-list/ 
+<br/> 
+Currently under development at github.com/lynklody/todo-list-firebase, will come back soon~ :kissing_heart:
 
 
 <h1>Dependencies</h1>
